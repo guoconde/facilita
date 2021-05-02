@@ -1,22 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <button class="noPrint">Problema 01</button>
+    <div class="noPrint">
+      <FirstProblem></FirstProblem>
+    </div>
+    <button class="noPrint">Problema 02</button>
+    <div>
+      <SecondProblem></SecondProblem>
+    </div>
+    <button class="noPrint">Problema 03</button>
+    <div class="noPrint">
+      <ThirdProblem></ThirdProblem>
+    </div>
+    <button class="noPrint">Problema 04</button>
+    <div class="noPrint"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FirstProblem from './components/FirstProblem'
+import SecondProblem from './components/SecondProblem'
+import ThirdProblem from './components/ThirdProblem'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { FirstProblem, SecondProblem, ThirdProblem }
 }
+
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,4 +39,20 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+button {
+	margin: 30px;
+	padding: 10px 20px;
+	font-size: 1.4rem;
+	border-radius: 5px;
+	color: #FFF;
+	background-color: #2196F3;
+}
+
+@media print {
+  .noPrint {
+    display: none;
+  }
+}
+
 </style>

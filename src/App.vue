@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <h1>Gustavo Conde Ribeiro</h1>
-    <h2>Teste prático para empresa Facilita</h2>
+    <h1 class="noPrint">Gustavo Conde Ribeiro</h1>
+    <h2 class="noPrint">Teste prático para empresa Facilita</h2>
     <button class="noPrint" @click="openFirst">Problema 01</button>
     <div class="noPrint" v-if="problemOne">
       <FirstProblem></FirstProblem>

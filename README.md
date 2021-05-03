@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+/* 
+- Teste prático desenvolvido por Gustavo Conde Ribeiro
+- Teste para empresa Facilita

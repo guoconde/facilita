@@ -17,13 +17,13 @@
       <div class="result">
         <button class="btn" @click="newGrid">Gerar Matriz</button>
         <div v-if="choice == 'full'">
-          <span> {{ grid }} </span>
+          <span v-if="grid != ''"> {{ grid }} </span>
         </div>
         <div v-else-if="choice == 'even'">
-          <span> {{ gridEven }} </span>
+          <span v-if="gridEven != ''"> {{ gridEven }} </span>
         </div>
         <div v-else>
-          <span> {{ gridOdd }} </span>
+          <span v-if="gridOdd != ''"> {{ gridOdd }} </span>
         </div>
       </div>
     </div>
@@ -239,7 +239,7 @@ export default {
   font-size: 1rem;
   border-radius: 5px;
   color: #fff;
-  background-color: black;
+  background-color: grey;
 }
 .result {
   display: block;

@@ -15,8 +15,7 @@
         </strong>
       </p>
     </div>
-    <button v-if="start" @click="getStart" class="btn">Iniciar</button>
-    <form action="" v-else>
+    <form action="">
       <input type="text" v-model="messageFib" id="input1" name="number" />
       <button class="btn" @click.prevent="getAnswer">Enviar</button>
       <div>
@@ -30,14 +29,13 @@
 
 <script>
 export default {
-  methods: {
-    getStart() {
-      this.start = false;
-
+  created: function() {
       setImmediate(() => {
         this.getAnswer();
       });
-    },
+  },
+  
+  methods: {
 
     getAnswer() {
       this.getMessage();
@@ -73,10 +71,8 @@ export default {
       const arrayFiboOn = [];
 
       for (let i = 0; i < getArray.length; i++) {
-        for (let j = 0; j < this.arrFibo.length; j++) {
-          if (getArray[i] == this.arrFibo[j]) {
-            arrayFiboOn.push(getArray[i]);
-          }
+        if(this.arrFibo.includes(parseInt(getArray[i]))){
+          arrayFiboOn.push(getArray[i]);
         }
       }
 
@@ -114,7 +110,6 @@ export default {
       messageFib: "",
       arrFibo: [],
       answer: "",
-      start: true,
     };
   },
 };

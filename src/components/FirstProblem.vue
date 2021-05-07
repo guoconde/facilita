@@ -60,7 +60,7 @@ export default {
       ) {
         return `${constName1} nunca será maior que ${constName2}`;
       } else {
-        const result = this.calcHeight() / this.calcRate();
+        const result = Math.floor(this.calcHeight() / this.calcRate());
         return constHeight1 > constHeight2
           ? `${constName2} será maior que ${constName1} em ${result + 1} anos`
           : `${constName1} será maior que ${constName2} em ${result + 1} anos`;
